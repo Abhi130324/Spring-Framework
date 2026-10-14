@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean class ="in.sp.beans.Address" id = "addr1" autowire-candidate="false">
+   <constructor-arg value = "100"/> 
+    <constructor-arg value = "Delhi"/>
+    <constructor-arg value = "14578"/>
+  </bean> 
+  
+  
+  <bean class ="in.sp.beans.Address" id = "addr2">
+   <constructor-arg value = "100"/> 
+    <constructor-arg value = "Jaipur"/>
+    <constructor-arg value = "1455"/>
+  </bean> 
+  
+  
+  
+  <bean class ="in.sp.beans.Student" id ="std" autowire="constructor"><!-- This will automatically inject  -->
+ <constructor-arg value = "Chetan" index = "0"/> <!-- Writing index is necessary to access it properly -->
+  <constructor-arg value = "102" index = "1"/>
+  </bean>
+  
+  
+  
+</beans>
