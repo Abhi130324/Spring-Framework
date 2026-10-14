@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean class ="in.sp.beans.Address" id = "addr1">
+   <property name="houseno" value ="100"/>
+   <property name="city" value ="Bangalore"/>
+   <property name="pincode" value ="124552"/>
+  </bean> 
+  
+  
+  
+   <bean class ="in.sp.beans.Address" id = "addr2" autowire-candidate="false"><!-- if we don't want this to qualify -->
+   <property name="houseno" value ="102"/>
+   <property name="city" value ="Delhi"/>
+   <property name="pincode" value ="124752"/>
+  </bean>
+  
+  <bean class ="in.sp.beans.Student" id ="std" autowire="byType">
+  <property name="name" value= "ABhijeet"/>
+  <property name="rollno" value= "36"/>
+  </bean>
+  
+  
+  
+</beans>
